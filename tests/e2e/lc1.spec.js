@@ -167,5 +167,5 @@ test.only("Handling Child windows ", async ({ browser }) => {
   await page.locator(passwordLocator).fill("learning");
   await page.locator(signInLocator).click();
 
-  await page.pause();
+  // await page.pause();
 });

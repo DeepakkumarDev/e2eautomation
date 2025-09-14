@@ -166,7 +166,7 @@ test("Login to the client page", async ({ browser }) => {
     }
   }
 
-  await await page.pause();
+  // await await page.pause();
 
   console.log(allTitles);
 });

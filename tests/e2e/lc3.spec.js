@@ -55,5 +55,5 @@ test.skip("Handling IFrame ui", async ({ page }) => {
   const digits = rawText.split(" ")[1];
   console.log(digits);
 
-  await page.pause();
+  // await page.pause();
 });

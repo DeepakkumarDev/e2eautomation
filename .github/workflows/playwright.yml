@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Playwright Tests (Windows)
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest # 👈 changed from ubuntu-latest to windows-latest
 
     steps:
       # Step 1: Checkout code
@@ -35,10 +35,54 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test --reporter=html
 
-      # Step 6: Upload Playwright HTML report (optional but useful)
+      # Step 6: Upload Playwright HTML report
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
           path: playwright-report/
+# name: Playwright Tests
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       # Step 1: Checkout code
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+
+#       # Step 2: Setup Node.js
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 18
+
+#       # Step 3: Install dependencies
+#       - name: Install dependencies
+#         run: npm install
+
+#       # Step 4: Install Playwright browsers
+#       - name: Install Playwright browsers
+#         run: npx playwright install --with-deps
+
+#       # Step 5: Run Playwright tests
+#       - name: Run Playwright tests
+#         run: npx playwright test --reporter=html
+
+#       # Step 6: Upload Playwright HTML report (optional but useful)
+#       - name: Upload Playwright report
+#         if: always()
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: playwright-report
+#           path: playwright-report/

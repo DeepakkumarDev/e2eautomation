@@ -63,7 +63,7 @@ test("UI controls", async ({ page }) => {
   await page.pause();
 });
 
-test.only("Child windows handle", async ({ browser }) => {
+test("Child windows handle", async ({ browser }) => {
   const context = await browser.newContext();
   const page = await context.newPage();
 

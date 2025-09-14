@@ -140,7 +140,7 @@ test.skip("Full ui control lc1", async ({ page }) => {
   await page.pause();
 });
 
-test.only("Handling Child windows ", async ({ browser }) => {
+test("Handling Child windows ", async ({ browser }) => {
   const url = "https://rahulshettyacademy.com/loginpagePractise/";
   const documentLinkLocator = "//a[contains(@href, 'documents-request')]";
   const paragraphLocator = "//p[@class='im-para red']";

@@ -1,3 +1,11 @@
 {
-    "url": "https://google.com"
+    "url": "https://rahulshettyacademy.com/loginpagePractise/",
+    "validUser": {
+        "username": "rahulshettyacademy",
+        "password": "learning"
+    },
+    "invalidUser": {
+        "username": "invalid",
+        "password": "wrong123"
+    }
 }
